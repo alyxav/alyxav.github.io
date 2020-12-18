@@ -1,0 +1,55 @@
+.parallax-wrapper {
+  width: 100vw;
+  height:50vh;
+  padding-top:.1vh;
+  box-sizing: border-box;
+}
+.regular-wrapper {
+  z-index: 2;
+  position: relative;
+  height:100vh;
+  padding-top:.1vh;
+  background-color: rgb(255, 255, 255);
+}
+.regular-wrapper2 {
+  z-index: 2;
+  position: relative;
+  padding-top:.1vh;
+  padding-bottom: 1vh;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.parallax-wrapper::before {
+  content:"";
+  width: 100vw;
+  height: 50vh;
+  background-image: url(assets/Downtown-photo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+
+html {
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x:hidden;
+  overflow-y:auto;
+
+}
+
+
+
+.parallax-wrapper::before {
+  z-index: -1;
+}
+
+
+
